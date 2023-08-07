@@ -97,9 +97,9 @@ const Invoice = () => {
                         <p>$ 204.00</p>
                     </div>
                 </div>
-                <div className="flex items-center justify-center gap-3 rounded-2xl bg-lightgreen-500 py-4 text-white">
+                <div className="flex cursor-pointer items-center justify-center gap-3 rounded-2xl bg-lightgreen-500 py-4 text-white">
                     <object data="/assets/chat_alt.svg" title="chat"></object>
-                    <p className="font-bold">WHATSAPP US</p>
+                    <p className="select-none font-bold">WHATSAPP US</p>
                 </div>
             </main>
         </>

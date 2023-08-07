@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "category": "Dry Cleaning",
+        "price": 10,
+        "title": "Jeans",
+        "cover": {
+            "name": "jeans",
+            "url": "/assets/jeans.png"
+        },
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit diam, lobortis at auctor eu, tempus eget enim. Etiam ullamcorper risus ac diam pulvinar, a auctor nunc sagittis. In euismod est est, ac pretium sem egestas eget. Nunc mollis rutrum nisl lacinia convallis. Curabitur et arcu eros. Proin eu tellus augue. Vestibulum auctor risus erat, et tempor augue "
+    },
+    {
+        "id": 2,
+        "category": "Dry Cleaning",
+        "price": 10,
+        "title": "T-Shirt",
+        "cover": {
+            "name": "t-shirt",
+            "url": "/assets/t-shirt.png"
+        },
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit diam, lobortis at auctor eu, tempus eget enim. Etiam ullamcorper risus ac diam pulvinar, a auctor nunc sagittis. In euismod est est, ac pretium sem egestas eget. Nunc mollis rutrum nisl lacinia convallis. Curabitur et arcu eros. Proin eu tellus augue. Vestibulum auctor risus erat, et tempor augue "
+    }
+]

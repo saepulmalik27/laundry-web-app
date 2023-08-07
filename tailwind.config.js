@@ -25,6 +25,7 @@ module.exports = {
                     300: '#2D9CDB',
                     200: '#CAECFF',
                     100: '#E7F5FD',
+                    500: '#3B97CB',
                 },
                 lightgreen: {
                     500: '#56E4A0',
@@ -34,6 +35,8 @@ module.exports = {
                 },
                 stroke: '#535353',
                 body: '#E7F5FD',
+                neutral: '#838383',
+                lightgray: '#C9C9C9',
             },
         },
     },

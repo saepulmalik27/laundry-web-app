@@ -1,45 +1,18 @@
+'use client'
 import { USDcurrency } from '@/utils/helpers'
 import Image from 'next/image'
 import React from 'react'
+import productList from '@/_mockup/product.json'
+import { TProduct } from '@/libs/types'
+import { useRouter } from 'next/navigation'
 
-type TLatestProduct = {
-    category: string
-    title: string
-    price: number
-    description?: string
-    cover: {
-        name: string
-        url: string
-    }
-}
-
-const dataProduct: TLatestProduct[] = [
-    {
-        category: 'Dry Cleaning',
-        price: 10,
-        title: 'Jeans',
-        cover: {
-            name: 'jeans',
-            url: '/assets/jeans.png',
-        },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit diam, lobortis at auctor eu, tempus eget enim. Etiam ullamcorper risus ac diam pulvinar, a auctor nunc sagittis. In euismod est est, ac pretium sem egestas eget. Nunc mollis rutrum nisl lacinia convallis. Curabitur et arcu eros. Proin eu tellus augue. Vestibulum auctor risus erat, et tempor augue ',
-    },
-    {
-        category: 'Dry Cleaning',
-        price: 10,
-        title: 'T-Shirt',
-        cover: {
-            name: 't-shirt',
-            url: '/assets/t-shirt.png',
-        },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit diam, lobortis at auctor eu, tempus eget enim. Etiam ullamcorper risus ac diam pulvinar, a auctor nunc sagittis. In euismod est est, ac pretium sem egestas eget. Nunc mollis rutrum nisl lacinia convallis. Curabitur et arcu eros. Proin eu tellus augue. Vestibulum auctor risus erat, et tempor augue ',
-    },
-]
+const dataProduct: TProduct[] = productList
 
 const LatestProduct = () => {
-    const handleClick = (target: string) => {}
+    const { push } = useRouter()
+    const handleClick = (target: number) => {
+        push(`/product/${target}`)
+    }
 
     return (
         <section className="flex flex-col gap-3 pl-9">
@@ -48,7 +21,8 @@ const LatestProduct = () => {
                 {dataProduct.map((product, index) => (
                     <div
                         key={index}
-                        className="relative w-fit cursor-pointer overflow-hidden rounded-[10px]">
+                        className="relative w-fit cursor-pointer overflow-hidden rounded-[10px]"
+                        onClick={() => handleClick(product.id)}>
                         <Image
                             src={product.cover.url}
                             width={176}
@@ -63,7 +37,6 @@ const LatestProduct = () => {
                             </div>
                             <h6 className="heading-6 text-white ">{product.title}</h6>
                             <h6 className="heading-6 text-xl text-white">
-                                {' '}
                                 {USDcurrency.format(product.price)}/pc
                             </h6>
                         </div>
